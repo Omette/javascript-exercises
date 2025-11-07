@@ -4,14 +4,8 @@ const removeFromArray = function(arr) {
 
     let result = [];
 
-    for (const arg of args) {
-        let index = arr.indexOf(arg);
-        while (index != -1) {
-            arr.splice(index, 1);
-            index = arr.indexOf(arg, index);
-        }
-    }
-    return arr;
+    result = arr.filter(item => !args.includes(item));
+    return result;
 };
 
 // Do not edit below this line
